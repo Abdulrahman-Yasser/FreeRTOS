@@ -1,2 +1,0 @@
-
-project(first_freertos_trying)
