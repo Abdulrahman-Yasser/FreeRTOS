@@ -1,0 +1,3 @@
+/home/abdu/FreeRTOS/3_new_one/buld/CMakeFiles/application.dir
+/home/abdu/FreeRTOS/3_new_one/buld/CMakeFiles/edit_cache.dir
+/home/abdu/FreeRTOS/3_new_one/buld/CMakeFiles/rebuild_cache.dir
