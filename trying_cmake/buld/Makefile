@@ -31,9 +31,6 @@ default_target: all
 
 .SUFFIXES: .hpux_make_needs_suffix_list
 
-# Produce verbose output by default.
-VERBOSE = 1
-
 # Command-line flag to silence nested $(MAKE).
 $(VERBOSE)MAKESILENT = -s
 
@@ -60,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/abdu/FreeRTOS/3_new_one
+CMAKE_SOURCE_DIR = /home/abdu/Study/FreeRTOS/trying_cmake
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/abdu/FreeRTOS/3_new_one/buld
+CMAKE_BINARY_DIR = /home/abdu/Study/FreeRTOS/trying_cmake/buld
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -90,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/abdu/FreeRTOS/3_new_one/buld/CMakeFiles /home/abdu/FreeRTOS/3_new_one/buld//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/abdu/Study/FreeRTOS/trying_cmake/buld/CMakeFiles /home/abdu/Study/FreeRTOS/trying_cmake/buld//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/abdu/FreeRTOS/3_new_one/buld/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/abdu/Study/FreeRTOS/trying_cmake/buld/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -120,24 +117,63 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named application
+# Target rules for targets named application.axf
 
 # Build rule for target.
-application: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 application
-.PHONY : application
+application.axf: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 application.axf
+.PHONY : application.axf
 
 # fast build rule for target.
-application/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/application.dir/build.make CMakeFiles/application.dir/build
-.PHONY : application/fast
+application.axf/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/application.axf.dir/build.make CMakeFiles/application.axf.dir/build
+.PHONY : application.axf/fast
+
+#=============================================================================
+# Target rules for targets named application.bin
+
+# Build rule for target.
+application.bin: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 application.bin
+.PHONY : application.bin
+
+# fast build rule for target.
+application.bin/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/application.bin.dir/build.make CMakeFiles/application.bin.dir/build
+.PHONY : application.bin/fast
+
+#=============================================================================
+# Target rules for targets named flash
+
+# Build rule for target.
+flash: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 flash
+.PHONY : flash
+
+# fast build rule for target.
+flash/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/flash.dir/build.make CMakeFiles/flash.dir/build
+.PHONY : flash/fast
+
+#=============================================================================
+# Target rules for targets named flash_2
+
+# Build rule for target.
+flash_2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 flash_2
+.PHONY : flash_2
+
+# fast build rule for target.
+flash_2/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/flash_2.dir/build.make CMakeFiles/flash_2.dir/build
+.PHONY : flash_2/fast
 
 main.o: main.c.o
 .PHONY : main.o
 
 # target to build an object file
 main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/application.dir/build.make CMakeFiles/application.dir/main.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/application.axf.dir/build.make CMakeFiles/application.axf.dir/main.c.o
 .PHONY : main.c.o
 
 main.i: main.c.i
@@ -145,7 +181,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/application.dir/build.make CMakeFiles/application.dir/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/application.axf.dir/build.make CMakeFiles/application.axf.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -153,7 +189,7 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/application.dir/build.make CMakeFiles/application.dir/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/application.axf.dir/build.make CMakeFiles/application.axf.dir/main.c.s
 .PHONY : main.c.s
 
 tm4c123gh6pm_startup_ccs_gcc.o: tm4c123gh6pm_startup_ccs_gcc.c.o
@@ -161,7 +197,7 @@ tm4c123gh6pm_startup_ccs_gcc.o: tm4c123gh6pm_startup_ccs_gcc.c.o
 
 # target to build an object file
 tm4c123gh6pm_startup_ccs_gcc.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/application.dir/build.make CMakeFiles/application.dir/tm4c123gh6pm_startup_ccs_gcc.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/application.axf.dir/build.make CMakeFiles/application.axf.dir/tm4c123gh6pm_startup_ccs_gcc.c.o
 .PHONY : tm4c123gh6pm_startup_ccs_gcc.c.o
 
 tm4c123gh6pm_startup_ccs_gcc.i: tm4c123gh6pm_startup_ccs_gcc.c.i
@@ -169,7 +205,7 @@ tm4c123gh6pm_startup_ccs_gcc.i: tm4c123gh6pm_startup_ccs_gcc.c.i
 
 # target to preprocess a source file
 tm4c123gh6pm_startup_ccs_gcc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/application.dir/build.make CMakeFiles/application.dir/tm4c123gh6pm_startup_ccs_gcc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/application.axf.dir/build.make CMakeFiles/application.axf.dir/tm4c123gh6pm_startup_ccs_gcc.c.i
 .PHONY : tm4c123gh6pm_startup_ccs_gcc.c.i
 
 tm4c123gh6pm_startup_ccs_gcc.s: tm4c123gh6pm_startup_ccs_gcc.c.s
@@ -177,7 +213,7 @@ tm4c123gh6pm_startup_ccs_gcc.s: tm4c123gh6pm_startup_ccs_gcc.c.s
 
 # target to generate assembly for a file
 tm4c123gh6pm_startup_ccs_gcc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/application.dir/build.make CMakeFiles/application.dir/tm4c123gh6pm_startup_ccs_gcc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/application.axf.dir/build.make CMakeFiles/application.axf.dir/tm4c123gh6pm_startup_ccs_gcc.c.s
 .PHONY : tm4c123gh6pm_startup_ccs_gcc.c.s
 
 # Help Target
@@ -188,7 +224,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... application"
+	@echo "... application.bin"
+	@echo "... flash"
+	@echo "... flash_2"
+	@echo "... application.axf"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

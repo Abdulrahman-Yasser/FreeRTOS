@@ -1,3 +1,6 @@
-/home/abdu/FreeRTOS/3_new_one/buld/CMakeFiles/application.dir
-/home/abdu/FreeRTOS/3_new_one/buld/CMakeFiles/edit_cache.dir
-/home/abdu/FreeRTOS/3_new_one/buld/CMakeFiles/rebuild_cache.dir
+/home/abdu/Study/FreeRTOS/trying_cmake/buld/CMakeFiles/application.axf.dir
+/home/abdu/Study/FreeRTOS/trying_cmake/buld/CMakeFiles/application.bin.dir
+/home/abdu/Study/FreeRTOS/trying_cmake/buld/CMakeFiles/flash.dir
+/home/abdu/Study/FreeRTOS/trying_cmake/buld/CMakeFiles/flash_2.dir
+/home/abdu/Study/FreeRTOS/trying_cmake/buld/CMakeFiles/edit_cache.dir
+/home/abdu/Study/FreeRTOS/trying_cmake/buld/CMakeFiles/rebuild_cache.dir

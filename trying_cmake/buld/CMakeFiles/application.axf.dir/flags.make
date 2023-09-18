@@ -6,5 +6,5 @@ C_DEFINES =
 
 C_INCLUDES = 
 
-C_FLAGS =  -ffunction-sections -fdata-sections -mthumb -mabi=aapcs -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -specs="nosys.specs" -Wl,--gc-sections -Wl,--script "/home/abdu/FreeRTOS/3_new_one/tm4c123gh6pm.lds"
+C_FLAGS =  -ffunction-sections -fdata-sections -mthumb -mabi=aapcs -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -specs="nosys.specs" -Wl,--gc-sections -Wl,--script "/home/abdu/Study/FreeRTOS/trying_cmake/tm4c123gh6pm.lds"
 
