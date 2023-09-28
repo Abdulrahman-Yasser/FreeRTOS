@@ -1,0 +1,142 @@
+cmake_minimum_required(VERSION 3.11.1)
+set(CMAKE_VERBOSE_MAKEFILE ON)
+
+project(targetPrj C)
+
+set(CMAKE_SYSTEM_NAME Generic)
+set(CMAKE_SYSTEM_PROCESSOR arm)
+set(CMAKE_TRY_COMPILE_TARGET_TYPE "STATIC_LIBRARY") # For cross-compiling
+
+set(CMAKE_C_COMPILER "/home/abdu/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc")
+set(CMAKE_C_OBJCOPY "/home/abdu/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-objcopy")
+
+
+# " -fcommon"
+# " -DCMAKE_C_FLAGS=-fcommon"
+# " -fno-common"
+
+string(CONCAT FLAGS
+    " -ffunction-sections" 
+    " -fcommon"
+    " -fdata-sections"
+    " -mthumb"
+    " -mabi=aapcs"
+    " -mcpu=cortex-m4"
+    " -mfpu=fpv4-sp-d16"
+    " -mfloat-abi=softfp"
+    " -specs=\"nosys.specs\""
+    " -Wl,--gc-sections"
+    " -Wl,--script \"${CMAKE_CURRENT_SOURCE_DIR}/tm4c123gh6pm.lds\""
+)
+
+set(CMAKE_C_FLAGS "${FLAGS}")
+
+
+# message("${SOURCES}")
+
+set(myLibrary "$ENV{HOME}/Study/PatternDesign-In-C/myLibraries")
+set(theTestingDrivers "$ENV{HOME}/Study/PatternDesign-In-C/Testing_SW_Layers/Testing_Drivers/")
+set(theTestingDriversToFit "$ENV{HOME}/Study/PatternDesign-In-C/")
+
+
+############################################################################################################
+
+# set(myLibrary "$ENV{HOME}/Study/PatternDesign-In-C/myLibraries")
+# set(theTestingDrivers "$ENV{HOME}/Study/PatternDesign-In-C/Testing_SW_Layers/Testing_Drivers/APP")
+
+file(GLOB_RECURSE SOURCES  "${CMAKE_CURRENT_SOURCE_DIR}/*.c" )
+file(GLOB_RECURSE MY_LIBRARIES  "${myLibrary}/*.c" )
+file(GLOB_RECURSE MY_TESTING_FILES  "${theTestingDrivers}/*.c" )
+
+
+
+list(FILTER MY_LIBRARIES EXCLUDE REGEX "(tm4c123gh6pm_startup_ccs.c|tm4c123gh6pm_startup_ccs_gcc|main.c|main.h)$")
+list(FILTER MY_TESTING_FILES EXCLUDE REGEX "(tm4c123gh6pm_startup_ccs.c|tm4c123gh6pm_startup_ccs_gcc.c|main.c|main.h)$")
+# list(REMOVE_ITEM MY_LIBRARIES tm4c123gh6pm_startup_ccs_gcc.c main.c main.h)
+# list(REMOVE_ITEM MY_TESTING_FILES tm4c123gh6pm_startup_ccs_gcc.c main.c main.h)
+message(${MY_TESTING_FILES})
+message(${MY_LIBRARIES})
+message(${SOURCES})
+
+
+
+# message("${SOURCES}")
+# message("${MY_LIBRARIES}")
+# message("${MY_TESTING_FILES}")
+
+
+# link_directories(
+#     ${myLibrary}/
+#     ${myLibrary}/General_Mcal
+#     ${myLibrary}/General_HAL
+#     ${myLibrary}/Chapter_1-Project/Client_Server_Pattern_ShowCons_WeatherStationExample/
+#     ${CMAKE_SOURCE_DIR}
+# )
+
+# include_directories(
+#     ${myLibrary}/
+#     ${myLibrary}/General_Mcal
+#     ${myLibrary}/General_HAL
+#     ${myLibrary}/Chapter_1-Project/Client_Server_Pattern_ShowCons_WeatherStationExample/
+#     # ${myLibrary}/Testing_SW_Layers/
+#     )
+
+############################################################################################################
+
+include_directories(
+    ${myLibrary}/
+    ${myLibrary}/General_Common
+    ${myLibrary}/Chapter_1-Project/Client_Server_Pattern_ShowCons_WeatherStationExample/
+    ${myLibrary}/Testing_SW_Layers/
+    ${theTestingDriversToFit}
+    ${theTestingDrivers}
+    )
+
+# add_subdirectory(${myLibrary} ${theTestingDrivers})
+
+
+
+
+add_executable(application.axf ${MY_LIBRARIES} ${MY_TESTING_FILES} ${SOURCES} )
+# target_include_directories(application.axf PUBLIC 
+#     ${myLibrary}/
+#     ${theTestingDrivers}/
+# )
+
+
+
+############################################################################################################
+
+# target_include_directories(application.axf PUBLIC 
+#     ${myLibrary}/
+#     ${myLibrary}/General_Mcal
+#     ${myLibrary}/General_HAL
+#     ${myLibrary}/Chapter_1-Project/Client_Server_Pattern_ShowCons_WeatherStationExample/
+#     "$ENV{HOME}/Study/PatternDesign-In-C"
+# )
+
+# target_include_directories(application.axf PUBLIC 
+#     ${myLibrary}/
+#     "$ENV{HOME}/Study/PatternDesign-In-C"
+#     )
+
+############################################################################################################
+
+add_custom_target(application.bin ALL DEPENDS application.axf)
+
+
+    add_custom_command(TARGET application.bin
+    COMMAND ${CMAKE_C_OBJCOPY} ARGS -O binary application.axf application.bin)
+
+
+add_custom_target(flash DEPENDS application.bin)
+add_custom_command(TARGET flash
+    USES_TERMINAL
+    COMMAND lm4flash -V
+    COMMAND lm4flash application.bin)
+
+set(FLASH_EXECUTABLE cat ~/myPassword.txt | sudo ~/temp/embedded/lm4tools/lm4flash/lm4flash)
+ADD_CUSTOM_TARGET("flash_2" DEPENDS application.axf 
+    COMMAND ${CMAKE_C_OBJCOPY} -O binary application.axf application.bin 
+    COMMAND ${FLASH_EXECUTABLE} application.bin
+)
