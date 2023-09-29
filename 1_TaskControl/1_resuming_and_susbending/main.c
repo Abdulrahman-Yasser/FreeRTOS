@@ -8,7 +8,7 @@
 #include "freeRTOS_files/FreeRTOS.h"
 #include "freeRTOS_files/task.h"
 
-#include "app/app.h"
+#include "myApp/app.h"
 
 
 #define FIRST_STACK 128
