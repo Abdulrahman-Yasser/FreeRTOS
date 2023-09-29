@@ -1,0 +1,6 @@
+/home/abdu/Study/FreeRTOS/1_TaskControl/1_BlinkingLed/build/CMakeFiles/application.axf.dir
+/home/abdu/Study/FreeRTOS/1_TaskControl/1_BlinkingLed/build/CMakeFiles/application.bin.dir
+/home/abdu/Study/FreeRTOS/1_TaskControl/1_BlinkingLed/build/CMakeFiles/flash.dir
+/home/abdu/Study/FreeRTOS/1_TaskControl/1_BlinkingLed/build/CMakeFiles/flash_2.dir
+/home/abdu/Study/FreeRTOS/1_TaskControl/1_BlinkingLed/build/CMakeFiles/edit_cache.dir
+/home/abdu/Study/FreeRTOS/1_TaskControl/1_BlinkingLed/build/CMakeFiles/rebuild_cache.dir
