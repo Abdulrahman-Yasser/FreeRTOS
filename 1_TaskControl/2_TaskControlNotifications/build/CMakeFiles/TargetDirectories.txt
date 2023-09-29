@@ -1,0 +1,6 @@
+/home/abdu/Study/FreeRTOS/1_TaskControl/2_TaskControlNotifications/build/CMakeFiles/application.axf.dir
+/home/abdu/Study/FreeRTOS/1_TaskControl/2_TaskControlNotifications/build/CMakeFiles/application.bin.dir
+/home/abdu/Study/FreeRTOS/1_TaskControl/2_TaskControlNotifications/build/CMakeFiles/flash.dir
+/home/abdu/Study/FreeRTOS/1_TaskControl/2_TaskControlNotifications/build/CMakeFiles/flash_2.dir
+/home/abdu/Study/FreeRTOS/1_TaskControl/2_TaskControlNotifications/build/CMakeFiles/edit_cache.dir
+/home/abdu/Study/FreeRTOS/1_TaskControl/2_TaskControlNotifications/build/CMakeFiles/rebuild_cache.dir
