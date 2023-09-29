@@ -32,16 +32,20 @@ string(CONCAT FLAGS
 set(CMAKE_C_FLAGS "${FLAGS}")
 
 
-set(myLibrary "$ENV{HOME}/Study/myLibrary_BareMetal")
+set(myLibrary "$ENV{HOME}/Study/PatternDesign-In-C/myLibraries")
+set(AppLayer "$ENV{HOME}/Study/PatternDesign-In-C/Testing_SW_Layers/Testing_Drivers")
 
 
 file(GLOB_RECURSE SOURCES  "${CMAKE_CURRENT_SOURCE_DIR}/*.c" )
 file(GLOB_RECURSE MY_LIBRARIES  "${myLibrary}/*.c" )
+file(GLOB_RECURSE MY_APP_LAYER  "${AppLayer}/*.c" )
 
 list(FILTER MY_LIBRARIES EXCLUDE REGEX "(tm4c123gh6pm_startup_ccs.c|tm4c123gh6pm_startup_ccs_gcc|main.c|main.h)$")
+list(FILTER MY_APP_LAYER EXCLUDE REGEX "(tm4c123gh6pm_startup_ccs.c|tm4c123gh6pm_startup_ccs_gcc|main.c|main.h)$")
 
 file(GLOB_RECURSE REMOVE_CMAKE "build/*")
 list(REMOVE_ITEM MY_LIBRARIES ${REMOVE_CMAKE})
+list(REMOVE_ITEM MY_APP_LAYER ${REMOVE_CMAKE})
 list(REMOVE_ITEM SOURCES ${REMOVE_CMAKE})
 
 message(${MY_LIBRARIES})
@@ -50,9 +54,11 @@ message(${SOURCES})
 
 include_directories(
     ${myLibrary}/
+    ${myLibrary}/Common
+    ${AppLayer}
     )
 
-add_executable(application.axf ${MY_LIBRARIES}  ${SOURCES} )
+add_executable(application.axf ${MY_LIBRARIES}  ${SOURCES} ${MY_APP_LAYER} )
 
 add_custom_target(application.bin ALL DEPENDS application.axf)
 
