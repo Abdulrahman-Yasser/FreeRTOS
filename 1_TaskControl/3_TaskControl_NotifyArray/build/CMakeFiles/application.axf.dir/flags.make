@@ -6,5 +6,5 @@ C_DEFINES =
 
 C_INCLUDES = -I/home/abdu/Study/PatternDesign-In-C/myLibraries -I/home/abdu/Study/PatternDesign-In-C/myLibraries/Common -I/home/abdu/Study/PatternDesign-In-C/Testing_SW_Layers/Testing_Drivers
 
-C_FLAGS =  -ffunction-sections -fcommon -fdata-sections -mthumb -mabi=aapcs -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -specs="nosys.specs" -Wl,--gc-sections -Wl,--script "/home/abdu/Study/FreeRTOS/1_TaskControl/1_resuming_and_susbending/tm4c123gh6pm.lds"
+C_FLAGS =  -ffunction-sections -fcommon -fdata-sections -mthumb -mabi=aapcs -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -specs="nosys.specs" -Wl,--gc-sections -Wl,--script "/home/abdu/Study/FreeRTOS/1_TaskControl/3_TaskControl_NotifyArray/tm4c123gh6pm.lds"
 

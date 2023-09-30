@@ -1,6 +1,6 @@
-/home/abdu/Study/FreeRTOS/1_TaskControl/1_resuming_and_susbending/build/CMakeFiles/application.axf.dir
-/home/abdu/Study/FreeRTOS/1_TaskControl/1_resuming_and_susbending/build/CMakeFiles/application.bin.dir
-/home/abdu/Study/FreeRTOS/1_TaskControl/1_resuming_and_susbending/build/CMakeFiles/flash.dir
-/home/abdu/Study/FreeRTOS/1_TaskControl/1_resuming_and_susbending/build/CMakeFiles/flash_2.dir
-/home/abdu/Study/FreeRTOS/1_TaskControl/1_resuming_and_susbending/build/CMakeFiles/edit_cache.dir
-/home/abdu/Study/FreeRTOS/1_TaskControl/1_resuming_and_susbending/build/CMakeFiles/rebuild_cache.dir
+/home/abdu/Study/FreeRTOS/1_TaskControl/3_TaskControl_NotifyArray/build/CMakeFiles/application.axf.dir
+/home/abdu/Study/FreeRTOS/1_TaskControl/3_TaskControl_NotifyArray/build/CMakeFiles/application.bin.dir
+/home/abdu/Study/FreeRTOS/1_TaskControl/3_TaskControl_NotifyArray/build/CMakeFiles/flash.dir
+/home/abdu/Study/FreeRTOS/1_TaskControl/3_TaskControl_NotifyArray/build/CMakeFiles/flash_2.dir
+/home/abdu/Study/FreeRTOS/1_TaskControl/3_TaskControl_NotifyArray/build/CMakeFiles/edit_cache.dir
+/home/abdu/Study/FreeRTOS/1_TaskControl/3_TaskControl_NotifyArray/build/CMakeFiles/rebuild_cache.dir

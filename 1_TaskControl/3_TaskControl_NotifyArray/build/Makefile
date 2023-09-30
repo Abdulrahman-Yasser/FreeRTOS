@@ -31,9 +31,6 @@ default_target: all
 
 .SUFFIXES: .hpux_make_needs_suffix_list
 
-# Produce verbose output by default.
-VERBOSE = 1
-
 # Command-line flag to silence nested $(MAKE).
 $(VERBOSE)MAKESILENT = -s
 
@@ -60,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/abdu/Study/FreeRTOS/1_TaskControl/1_resuming_and_susbending
+CMAKE_SOURCE_DIR = /home/abdu/Study/FreeRTOS/1_TaskControl/3_TaskControl_NotifyArray
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/abdu/Study/FreeRTOS/1_TaskControl/1_resuming_and_susbending/build
+CMAKE_BINARY_DIR = /home/abdu/Study/FreeRTOS/1_TaskControl/3_TaskControl_NotifyArray/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -90,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/abdu/Study/FreeRTOS/1_TaskControl/1_resuming_and_susbending/build/CMakeFiles /home/abdu/Study/FreeRTOS/1_TaskControl/1_resuming_and_susbending/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/abdu/Study/FreeRTOS/1_TaskControl/3_TaskControl_NotifyArray/build/CMakeFiles /home/abdu/Study/FreeRTOS/1_TaskControl/3_TaskControl_NotifyArray/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/abdu/Study/FreeRTOS/1_TaskControl/1_resuming_and_susbending/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/abdu/Study/FreeRTOS/1_TaskControl/3_TaskControl_NotifyArray/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -170,6 +167,30 @@ flash_2: cmake_check_build_system
 flash_2/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/flash_2.dir/build.make CMakeFiles/flash_2.dir/build
 .PHONY : flash_2/fast
+
+app/app.o: app/app.c.o
+.PHONY : app/app.o
+
+# target to build an object file
+app/app.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/application.axf.dir/build.make CMakeFiles/application.axf.dir/app/app.c.o
+.PHONY : app/app.c.o
+
+app/app.i: app/app.c.i
+.PHONY : app/app.i
+
+# target to preprocess a source file
+app/app.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/application.axf.dir/build.make CMakeFiles/application.axf.dir/app/app.c.i
+.PHONY : app/app.c.i
+
+app/app.s: app/app.c.s
+.PHONY : app/app.s
+
+# target to generate assembly for a file
+app/app.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/application.axf.dir/build.make CMakeFiles/application.axf.dir/app/app.c.s
+.PHONY : app/app.c.s
 
 freeRTOS_files/heap_2.o: freeRTOS_files/heap_2.c.o
 .PHONY : freeRTOS_files/heap_2.o
@@ -1923,30 +1944,6 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/application.axf.dir/build.make CMakeFiles/application.axf.dir/main.c.s
 .PHONY : main.c.s
 
-myApp/app.o: myApp/app.c.o
-.PHONY : myApp/app.o
-
-# target to build an object file
-myApp/app.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/application.axf.dir/build.make CMakeFiles/application.axf.dir/myApp/app.c.o
-.PHONY : myApp/app.c.o
-
-myApp/app.i: myApp/app.c.i
-.PHONY : myApp/app.i
-
-# target to preprocess a source file
-myApp/app.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/application.axf.dir/build.make CMakeFiles/application.axf.dir/myApp/app.c.i
-.PHONY : myApp/app.c.i
-
-myApp/app.s: myApp/app.c.s
-.PHONY : myApp/app.s
-
-# target to generate assembly for a file
-myApp/app.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/application.axf.dir/build.make CMakeFiles/application.axf.dir/myApp/app.c.s
-.PHONY : myApp/app.c.s
-
 tm4c123gh6pm_startup_ccs_gcc.o: tm4c123gh6pm_startup_ccs_gcc.c.o
 .PHONY : tm4c123gh6pm_startup_ccs_gcc.o
 
@@ -1983,6 +1980,9 @@ help:
 	@echo "... flash"
 	@echo "... flash_2"
 	@echo "... application.axf"
+	@echo "... app/app.o"
+	@echo "... app/app.i"
+	@echo "... app/app.s"
 	@echo "... freeRTOS_files/heap_2.o"
 	@echo "... freeRTOS_files/heap_2.i"
 	@echo "... freeRTOS_files/heap_2.s"
@@ -2202,9 +2202,6 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... myApp/app.o"
-	@echo "... myApp/app.i"
-	@echo "... myApp/app.s"
 	@echo "... tm4c123gh6pm_startup_ccs_gcc.o"
 	@echo "... tm4c123gh6pm_startup_ccs_gcc.i"
 	@echo "... tm4c123gh6pm_startup_ccs_gcc.s"

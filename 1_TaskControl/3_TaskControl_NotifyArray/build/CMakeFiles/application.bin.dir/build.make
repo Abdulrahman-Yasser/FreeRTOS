@@ -27,9 +27,6 @@
 
 .SUFFIXES: .hpux_make_needs_suffix_list
 
-# Produce verbose output by default.
-VERBOSE = 1
-
 # Command-line flag to silence nested $(MAKE).
 $(VERBOSE)MAKESILENT = -s
 
@@ -56,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/abdu/Study/FreeRTOS/1_TaskControl/1_resuming_and_susbending
+CMAKE_SOURCE_DIR = /home/abdu/Study/FreeRTOS/1_TaskControl/3_TaskControl_NotifyArray
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/abdu/Study/FreeRTOS/1_TaskControl/1_resuming_and_susbending/build
+CMAKE_BINARY_DIR = /home/abdu/Study/FreeRTOS/1_TaskControl/3_TaskControl_NotifyArray/build
 
 # Utility rule file for application.bin.
 
@@ -85,6 +82,6 @@ CMakeFiles/application.bin.dir/clean:
 .PHONY : CMakeFiles/application.bin.dir/clean
 
 CMakeFiles/application.bin.dir/depend:
-	cd /home/abdu/Study/FreeRTOS/1_TaskControl/1_resuming_and_susbending/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/abdu/Study/FreeRTOS/1_TaskControl/1_resuming_and_susbending /home/abdu/Study/FreeRTOS/1_TaskControl/1_resuming_and_susbending /home/abdu/Study/FreeRTOS/1_TaskControl/1_resuming_and_susbending/build /home/abdu/Study/FreeRTOS/1_TaskControl/1_resuming_and_susbending/build /home/abdu/Study/FreeRTOS/1_TaskControl/1_resuming_and_susbending/build/CMakeFiles/application.bin.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/abdu/Study/FreeRTOS/1_TaskControl/3_TaskControl_NotifyArray/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/abdu/Study/FreeRTOS/1_TaskControl/3_TaskControl_NotifyArray /home/abdu/Study/FreeRTOS/1_TaskControl/3_TaskControl_NotifyArray /home/abdu/Study/FreeRTOS/1_TaskControl/3_TaskControl_NotifyArray/build /home/abdu/Study/FreeRTOS/1_TaskControl/3_TaskControl_NotifyArray/build /home/abdu/Study/FreeRTOS/1_TaskControl/3_TaskControl_NotifyArray/build/CMakeFiles/application.bin.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/application.bin.dir/depend
 

@@ -18,7 +18,7 @@
 
 void app_init(void);
 
-void Task1_blinking(void* pvParameter);
+void Task1_resumer(void* pvParameter);
 void Task2_blinking(void* pvParameter);
 
 #endif /* MAIN_H_ */

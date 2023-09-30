@@ -8,11 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/abdu/Study/FreeRTOS/1_TaskControl/1_resuming_and_susbending/freeRTOS_files/heap_2.c" "CMakeFiles/application.axf.dir/freeRTOS_files/heap_2.c.o" "gcc" "CMakeFiles/application.axf.dir/freeRTOS_files/heap_2.c.o.d"
-  "/home/abdu/Study/FreeRTOS/1_TaskControl/1_resuming_and_susbending/freeRTOS_files/list.c" "CMakeFiles/application.axf.dir/freeRTOS_files/list.c.o" "gcc" "CMakeFiles/application.axf.dir/freeRTOS_files/list.c.o.d"
-  "/home/abdu/Study/FreeRTOS/1_TaskControl/1_resuming_and_susbending/freeRTOS_files/port.c" "CMakeFiles/application.axf.dir/freeRTOS_files/port.c.o" "gcc" "CMakeFiles/application.axf.dir/freeRTOS_files/port.c.o.d"
-  "/home/abdu/Study/FreeRTOS/1_TaskControl/1_resuming_and_susbending/freeRTOS_files/queue.c" "CMakeFiles/application.axf.dir/freeRTOS_files/queue.c.o" "gcc" "CMakeFiles/application.axf.dir/freeRTOS_files/queue.c.o.d"
-  "/home/abdu/Study/FreeRTOS/1_TaskControl/1_resuming_and_susbending/freeRTOS_files/tasks.c" "CMakeFiles/application.axf.dir/freeRTOS_files/tasks.c.o" "gcc" "CMakeFiles/application.axf.dir/freeRTOS_files/tasks.c.o.d"
+  "/home/abdu/Study/FreeRTOS/1_TaskControl/3_TaskControl_NotifyArray/app/app.c" "CMakeFiles/application.axf.dir/app/app.c.o" "gcc" "CMakeFiles/application.axf.dir/app/app.c.o.d"
+  "/home/abdu/Study/FreeRTOS/1_TaskControl/3_TaskControl_NotifyArray/freeRTOS_files/heap_2.c" "CMakeFiles/application.axf.dir/freeRTOS_files/heap_2.c.o" "gcc" "CMakeFiles/application.axf.dir/freeRTOS_files/heap_2.c.o.d"
+  "/home/abdu/Study/FreeRTOS/1_TaskControl/3_TaskControl_NotifyArray/freeRTOS_files/list.c" "CMakeFiles/application.axf.dir/freeRTOS_files/list.c.o" "gcc" "CMakeFiles/application.axf.dir/freeRTOS_files/list.c.o.d"
+  "/home/abdu/Study/FreeRTOS/1_TaskControl/3_TaskControl_NotifyArray/freeRTOS_files/port.c" "CMakeFiles/application.axf.dir/freeRTOS_files/port.c.o" "gcc" "CMakeFiles/application.axf.dir/freeRTOS_files/port.c.o.d"
+  "/home/abdu/Study/FreeRTOS/1_TaskControl/3_TaskControl_NotifyArray/freeRTOS_files/queue.c" "CMakeFiles/application.axf.dir/freeRTOS_files/queue.c.o" "gcc" "CMakeFiles/application.axf.dir/freeRTOS_files/queue.c.o.d"
+  "/home/abdu/Study/FreeRTOS/1_TaskControl/3_TaskControl_NotifyArray/freeRTOS_files/tasks.c" "CMakeFiles/application.axf.dir/freeRTOS_files/tasks.c.o" "gcc" "CMakeFiles/application.axf.dir/freeRTOS_files/tasks.c.o.d"
   "/home/abdu/Study/PatternDesign-In-C/Testing_SW_Layers/Testing_Drivers/APP/Testing_ADC/Testing_ADC.c" "CMakeFiles/application.axf.dir/home/abdu/Study/PatternDesign-In-C/Testing_SW_Layers/Testing_Drivers/APP/Testing_ADC/Testing_ADC.c.o" "gcc" "CMakeFiles/application.axf.dir/home/abdu/Study/PatternDesign-In-C/Testing_SW_Layers/Testing_Drivers/APP/Testing_ADC/Testing_ADC.c.o.d"
   "/home/abdu/Study/PatternDesign-In-C/Testing_SW_Layers/Testing_Drivers/APP/Testing_DIO_ISR/Testing_DIO.c" "CMakeFiles/application.axf.dir/home/abdu/Study/PatternDesign-In-C/Testing_SW_Layers/Testing_Drivers/APP/Testing_DIO_ISR/Testing_DIO.c.o" "gcc" "CMakeFiles/application.axf.dir/home/abdu/Study/PatternDesign-In-C/Testing_SW_Layers/Testing_Drivers/APP/Testing_DIO_ISR/Testing_DIO.c.o.d"
   "/home/abdu/Study/PatternDesign-In-C/Testing_SW_Layers/Testing_Drivers/APP/Testing_DS1037/Testing_DS1307.c" "CMakeFiles/application.axf.dir/home/abdu/Study/PatternDesign-In-C/Testing_SW_Layers/Testing_Drivers/APP/Testing_DS1037/Testing_DS1307.c.o" "gcc" "CMakeFiles/application.axf.dir/home/abdu/Study/PatternDesign-In-C/Testing_SW_Layers/Testing_Drivers/APP/Testing_DS1037/Testing_DS1307.c.o.d"
@@ -80,9 +81,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/abdu/Study/PatternDesign-In-C/myLibraries/MCAL_Layer/UART/Static/src/UART.c" "CMakeFiles/application.axf.dir/home/abdu/Study/PatternDesign-In-C/myLibraries/MCAL_Layer/UART/Static/src/UART.c.o" "gcc" "CMakeFiles/application.axf.dir/home/abdu/Study/PatternDesign-In-C/myLibraries/MCAL_Layer/UART/Static/src/UART.c.o.d"
   "/home/abdu/Study/PatternDesign-In-C/myLibraries/MCAL_Layer/WDT/Dynamic/src/WDT_Lcfg.c" "CMakeFiles/application.axf.dir/home/abdu/Study/PatternDesign-In-C/myLibraries/MCAL_Layer/WDT/Dynamic/src/WDT_Lcfg.c.o" "gcc" "CMakeFiles/application.axf.dir/home/abdu/Study/PatternDesign-In-C/myLibraries/MCAL_Layer/WDT/Dynamic/src/WDT_Lcfg.c.o.d"
   "/home/abdu/Study/PatternDesign-In-C/myLibraries/MCAL_Layer/WDT/Static/src/WDT.c" "CMakeFiles/application.axf.dir/home/abdu/Study/PatternDesign-In-C/myLibraries/MCAL_Layer/WDT/Static/src/WDT.c.o" "gcc" "CMakeFiles/application.axf.dir/home/abdu/Study/PatternDesign-In-C/myLibraries/MCAL_Layer/WDT/Static/src/WDT.c.o.d"
-  "/home/abdu/Study/FreeRTOS/1_TaskControl/1_resuming_and_susbending/main.c" "CMakeFiles/application.axf.dir/main.c.o" "gcc" "CMakeFiles/application.axf.dir/main.c.o.d"
-  "/home/abdu/Study/FreeRTOS/1_TaskControl/1_resuming_and_susbending/myApp/app.c" "CMakeFiles/application.axf.dir/myApp/app.c.o" "gcc" "CMakeFiles/application.axf.dir/myApp/app.c.o.d"
-  "/home/abdu/Study/FreeRTOS/1_TaskControl/1_resuming_and_susbending/tm4c123gh6pm_startup_ccs_gcc.c" "CMakeFiles/application.axf.dir/tm4c123gh6pm_startup_ccs_gcc.c.o" "gcc" "CMakeFiles/application.axf.dir/tm4c123gh6pm_startup_ccs_gcc.c.o.d"
+  "/home/abdu/Study/FreeRTOS/1_TaskControl/3_TaskControl_NotifyArray/main.c" "CMakeFiles/application.axf.dir/main.c.o" "gcc" "CMakeFiles/application.axf.dir/main.c.o.d"
+  "/home/abdu/Study/FreeRTOS/1_TaskControl/3_TaskControl_NotifyArray/tm4c123gh6pm_startup_ccs_gcc.c" "CMakeFiles/application.axf.dir/tm4c123gh6pm_startup_ccs_gcc.c.o" "gcc" "CMakeFiles/application.axf.dir/tm4c123gh6pm_startup_ccs_gcc.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

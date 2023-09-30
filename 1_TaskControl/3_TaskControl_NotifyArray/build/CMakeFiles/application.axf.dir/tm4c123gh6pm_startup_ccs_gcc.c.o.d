@@ -1,5 +1,5 @@
 CMakeFiles/application.axf.dir/tm4c123gh6pm_startup_ccs_gcc.c.o: \
- /home/abdu/Study/FreeRTOS/1_TaskControl/1_resuming_and_susbending/tm4c123gh6pm_startup_ccs_gcc.c \
+ /home/abdu/Study/FreeRTOS/1_TaskControl/3_TaskControl_NotifyArray/tm4c123gh6pm_startup_ccs_gcc.c \
  /home/abdu/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
  /home/abdu/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
  /home/abdu/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \

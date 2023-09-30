@@ -21,7 +21,7 @@ int main(void){
     TaskHandle_t second_handle;
 
 
-    xTaskCreate(Task1_blinking, "First", FIRST_STACK, NULL, 1, &First_handle);
+    xTaskCreate(Task1_resumer, "First", FIRST_STACK, NULL, 1, &First_handle);
     xTaskCreate(Task2_blinking, "Second", FIRST_STACK, NULL, 1, &second_handle);
     
     
